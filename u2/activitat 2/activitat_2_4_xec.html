@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activitat 2.4 Xec Melià Trobat</title>
+</head>
+<body>
+
+    <h1>Activitat 2.4</h1>
+    <h2>Escriu un programa que prengui com a entrada un nombre enter i indiqui quina quantitat cal sumar-li perquè el resultat sigui múltiple de 7. </h2>
+
+    <script>
+
+        function multipleDeSet (numIntroduit){
+
+            if(numIntroduit % 7 == 0){
+                document.write(numIntroduit + " es multiple de 7")
+
+            }else{
+                document.write(numIntroduit + " no es multiple de 7") 
+                    if ((numIntroduit+1) % 7 == 0 ){
+                        document.write("<br><br><i> Li has de sumar 1 per arribar a "  + (numIntroduit+1) + "</i>") 
+                    }               
+                    if ((numIntroduit+2) % 7 == 0 ){
+                        document.write("<br><br><i> Li has de sumar 2 per arribar a "  + (numIntroduit+2) + "</i>") 
+                    }               
+                    if ((numIntroduit+3) % 7 == 0 ){
+                        document.write("<br><br><i> Li has de sumar 3 per arribar a "  + (numIntroduit+3) + "</i>") 
+                    }               
+                    if ((numIntroduit+4) % 7 == 0 ){
+                        document.write("<br><br><i> Li has de sumar 4 per arribar a "  + (numIntroduit+4) + "</i>") 
+                    }               
+                    if ((numIntroduit+5) % 7 == 0 ){
+                        document.write("<br><br><i> Li has de sumar 5 per arribar a "  + (numIntroduit+5) + "</i>") 
+                    }               
+                    if ((numIntroduit+6) % 7 == 0 ){
+                        document.write("<br><br><i> Li has de sumar 6 per arribar a "  + (numIntroduit+6) + "</i>") 
+                    }               
+            }
+        }
+
+        // ESCRIURE AQUI EL NOMBRE QUE VOLS COMPROBAR
+        multipleDeSet( 8 );
+
+    </script>
+    
+</body>
+</html>

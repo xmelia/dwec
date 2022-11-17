@@ -1,0 +1,14 @@
+.btnLletra{
+    background-color: rgb(149, 149, 255);
+    border: none;
+    padding: 10px 15px;
+    margin: 0 15px 0 15px;
+    border-radius: 5px;
+}
+
+.btnLletra:hover{
+    background-color: rgb(133, 133, 255);
+    font-weight: bold;
+    color: white;
+    transform: scale(1.2);
+}

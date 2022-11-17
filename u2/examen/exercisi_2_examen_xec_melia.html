@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercisi 2</title>
+</head>
+<body>
+
+    <script>
+        let introduit;
+        introduit = prompt("Introdueix el meu nom (xec)");
+        let resposta = "xec";
+
+        let introduit2;
+        introduit2 = prompt("Introdueix el meu cognom (melia)");
+        let resposta2 = "melia";
+
+
+
+        while(introduit != resposta && introduit2 != resposta2){
+            alert("ERROR, intenta-ho de nou")
+            introduit = prompt("Torna a escriure el nom");
+            introduit2 = prompt("Torna a escriure el cognom");      
+        }         
+        
+        while(introduit != resposta){
+             introduit = prompt("Et falta el nom");        
+        }         
+                
+        while(introduit2 != resposta2){
+             introduit2 = prompt("Et falta el cognom");        
+        }
+        
+        alert("benvingut")
+        
+    </script>  
+    
+</body>
+</html>

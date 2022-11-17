@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Parental</title>
+</head>
+<body>
+    
+    <script>
+        const personatge = "John Nieve"; // cadena clau
+        let captura = ""; // captura el promt
+        let esCorrecte = false; // boolean per a controlar el buecle
+        let indice = -1; // Posicio de la cadena en el text
+
+
+        while(!esCorrecte){
+
+            captura = prompt("Introdueix el nom i cognom del personatge.")
+
+            indice = captura.toLowerCase().indexOf("john");
+
+            if(indice != -1){
+                // Si ha trobat el nom cercam el cognom
+                indice = -1;
+                indice = captura.toLowerCase().indexOf("nieve")
+
+                if (indice != -1) {
+                    // Si ha trobat el cognom donem la benbinguda
+                    document.write("<b>Benvingut a la web</b>")
+                    esCorrecte=true;
+                }
+                else{
+                    //Te el nom, pero no el cognom: missatge pertinent
+                    console.log("Et falta el cognom");
+                }
+            } else{
+                indice = captura.toLowerCase().indexOf("nieve");
+
+                if (indice != -1){
+                    console.log("Et falta el nom")
+                }else{
+                    console.log("Et falta el cognom");
+                }
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

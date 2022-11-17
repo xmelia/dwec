@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DWEC - UD02</title>
+        <script src="JS/funciones.js"></script>
+    </head>
+    <body>
+
+        <!-- PER IMPRIMIR PER PANTALLA -->
+        <script>
+        var persona = {
+            nombre: "Xec",
+            edad: 20,
+            altura: 171,
+            peso: 55,
+            saludar: () => {
+                return "Hola";
+            },
+            despedirse: () => {
+                return "Adeu";
+            }
+        };
+
+        // FUUNCIÓ AFEGIDA DESPRES DE HAVER CREAT L'OBJECTE I UTILITZANT " this. "
+        persona.devuelvePeso = function(){
+            return this.peso
+        }
+            console.log("La persona se llama " + persona.nombre + " tiene " + persona.edad + " y mide " + persona.altura + "cm");
+            console.log(persona.saludar(), persona.despedirse()) // CRIDAM LA FUNCIÓ
+            console.log(persona.devuelvePeso())
+
+        </script>
+
+    </body>
+</html>

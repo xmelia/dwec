@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>pruebas</title>
+</head>
+
+<body>
+
+    <p id="fecha"></p>
+    <p id="miArrayChispas"></p>
+
+    <script>
+
+            //FECHAS
+        let fecha = new Date();
+        let fecha2 = new Date(44444444);
+        let fecha3 = new Date(2022,10,4,16,02,33,33,22);
+
+        console.log(fecha);
+        console.log(fecha2);
+        console.log(fecha3);
+
+            //ARRAYS
+        let arrDias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+        
+       
+        document.getElementById("fecha").innerHTML = arrDias + "\n" +  arrDias.sort();
+        
+        document.getElementById("miArrayChispas").innerHTML = arrDias[2] + ' ' + arrDias.length;
+        // document.getElementById("miArrayChispas").innerHTML = arrDias.length;
+
+        arrDias.forEach(element => {
+            console.log(element);
+        });
+
+        function provaRecorrerArray(valor, index, array) {
+            console.log(valor);            
+            console.log(index);            
+            console.log(array);            
+        }
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activitat_2_2</title>
+</head>
+<body>
+
+    <h2>ACTIVITAT 2.2: KAPREKAR</h2>
+    <h4>Escribir un numero de 4 cifras con minimo 1 diferente. Ordenar de mayor a menor y restar Mayor-Menor. Hasta que el resultado sea 6174. Max 7 iteraciones</h4>
+    <p id="introduit"></p>
+    <div id="operacion"></div>
+    
+    <script>
+
+        let numIntroducido = prompt("introdueix un nombre de 4 xifres amb minim 2 nombres difernts per fer KAPREKAR. ");
+
+        function devuelveOrdenMayor(numIntroducido){
+            let strIntroducido = numIntroducido.toString();
+            
+            let strPrimeraCifra = strIntroducido.charAt(0);
+            let strSegundaCifra = strIntroducido.charAt(1);
+            let strTerceraCifra = strIntroducido.charAt(2);
+            let strCuartaCifra = strIntroducido.charAt(3);
+    
+            var numeros = [strPrimeraCifra, strSegundaCifra, strTerceraCifra, strCuartaCifra];
+            numeros.sort();
+
+            let ordenadoMayor = numeros[3] + numeros[2] + numeros[1] + numeros[0];
+            let numMayor = parseInt(ordenadoMayor);
+
+            return numMayor;
+        }
+
+        function devuelveOrdenMenor(numIntroducido){
+            let strIntroducido = numIntroducido.toString();
+            
+            let strPrimeraCifra = strIntroducido.charAt(0);
+            let strSegundaCifra = strIntroducido.charAt(1);
+            let strTerceraCifra = strIntroducido.charAt(2);
+            let strCuartaCifra = strIntroducido.charAt(3);
+    
+            var numeros = [strPrimeraCifra, strSegundaCifra, strTerceraCifra, strCuartaCifra];
+            numeros.sort();
+
+            let ordenadoMenor = numeros[0] + numeros[1] + numeros[2] + numeros[3];
+            let numMenor = parseInt(ordenadoMenor);
+
+            return numMenor;
+        }
+
+        let iteraciones = 0;
+
+        function operacionKaprekar (numIntroducido){
+            
+            let resultado = 0;
+            iteraciones++;
+
+            resultado = devuelveOrdenMayor(numIntroducido) - devuelveOrdenMenor(numIntroducido);
+            
+            document.write(devuelveOrdenMayor(numIntroducido) + " - " + devuelveOrdenMenor(numIntroducido) + " = " + resultado + "<br>")
+        
+            
+            while (resultado != 6174) {
+                
+                operacionKaprekar(resultado)
+                
+                resultado = 6174; 
+                
+            }
+
+            document.write("<br>Iteraciones hechas: " + iteraciones)
+            
+            return $;
+        }
+        
+        let introduit = document.getElementById("introduit");
+        introduit.innerHTML = "Numero introducido: " + numIntroducido + "<br>";
+
+
+        let operacion = document.getElementById("operacion");
+        operacion.innerHTML = operacionKaprekar(numIntroducido);      
+
+        
+    </script>
+    
+</body>
+</html>

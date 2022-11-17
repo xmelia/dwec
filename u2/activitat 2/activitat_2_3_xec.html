@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercisis 2.3 JS</title>
+</head>
+<body>
+
+    <!-- EXERCISI 1 -->
+    <h1>Activitat 2.3 - Xec Melià Trobat</h1>
+    <h2>1) Sol·licitar un número i presentar la seva taula de multiplicar.</h2>
+
+    <script>
+
+        let numIntroducido = 0;
+
+        function tablaMultiplicar(numIntroducido) {
+            
+            for(let i = 1; i<=10; i++){
+                document.write (numIntroducido + " x " + i + " = " + numIntroducido*i + "<br>");
+            numIntroducido}
+
+            return $;            
+        }
+
+        numIntroducido = prompt("ACTIVITAT 1: \nQue numero quieres multiplicar? ")
+        tablaMultiplicar(numIntroducido);
+
+    </script>
+
+
+    <!-- EXERCISI 2 -->
+    <h2>2) Presentar en la pàgina el text “JavaScript” en els 6 diferents tipus de capçalera HTML, de major a menor.</h2>
+
+    <h1 style="color: darkblue;">h1: JavaScript</h1>
+    <h2 style="color: darkblue;">h2: JavaScript</h2>
+    <h3 style="color: darkblue;">h3: JavaScript</h3>
+    <h4 style="color: darkblue;">h4: JavaScript</h4>
+    <h5 style="color: darkblue;">h5: JavaScript</h5>
+    <h6 style="color: darkblue;">h6: JavaScript</h6>
+
+     <!-- EXERCISI 3 -->
+     <h2>3) El factorial d'un nombre enter n és una operació matemàtica que consisteix a multiplicar tots els factors <br> n x (n-1) x (n-2) x ... x 1. Així, el factorial de 5 (escrit com 5!) és igual a: 5! = 5 x 4 x 3 x 2 x 1 = 120.
+        Utilitzant l'estructura <br> for, crear un script que calculi el factorial d'un nombre enter.</h2>
+
+    <script>
+
+        let numIntroducido2;
+        
+        function factorial (numIntroducido2) {
+
+        var variableAjuda = 1; 
+        for (i=1; i<=numIntroducido2; i++) {
+            variableAjuda = variableAjuda * i; 
+        }
+
+        return variableAjuda; 
+        }      
+        
+        numIntroducido2 = prompt("ACTIVITAT 2: \nQue numero factorizar? ")
+
+        document.write("El factorial de " + numIntroducido2 + " es " + "<b>" + factorial(numIntroducido2) + "</b>");
+    
+    </script>
+
+
+    <!-- EXERCISI 4 -->
+
+    <h2>4) Definir una funció a la qual se li passa com a argument una cadena. 
+        La funció determina si aquesta cadena està formada només per majúscules, només per <br> minúscules o per una mescla d'ambdues.   </h2>
+
+    <script>
+
+        let cadenaIntroducida = prompt("ACTIVITAT 4: \nIntroduce una palabra para saber si es mayuscula, minuscula o mezclado: ");
+        let strMayusculas = cadenaIntroducida.toUpperCase();
+        
+        let contadorMayusculas = 0;   
+        let contadorMinusculas = 0;   
+
+        for (let i = 0; i < cadenaIntroducida.length; i++) {
+
+            if (cadenaIntroducida.charAt(i)===(strMayusculas.charAt(i))){
+                contadorMayusculas++;
+            }else{
+                contadorMinusculas++;
+            }        
+            
+        }
+
+        if (contadorMayusculas === cadenaIntroducida.length){
+            document.write("La palabra <i>" + cadenaIntroducida + "</i> esta toda en mayusculas");
+        }else if(contadorMinusculas === cadenaIntroducida.length ){
+            document.write("La palabra <i>" + cadenaIntroducida + "</i> esta toda en minusculas");
+        }else{
+            document.write("La palabra <i>" + cadenaIntroducida + "</i> tiene caracteres mezclados entre minuscula y mayuscula");
+        }
+
+
+    </script>
+
+
+    <!-- EXERCISI 5 -->
+
+    <h2>5) El juego del ahorcado.</h2>
+
+    <p>Es juga desde el promt de l'inici</p>
+
+    <script>
+
+        let palabra = prompt("ACTIVITAT 5: \nEscribe una palabra para jugar al ahorcado:");
+
+        function juegoDelAhorcado(palabra){
+
+            let acierto = 0;
+            let minuscula = palabra.toLowerCase();
+
+            while(acierto < palabra.length){
+
+                let intoducido = prompt("JUEGO DEL AHORCADO: \nIntroduce una letra:  \n\nLlevas acertadas " + acierto + " / " + palabra.length + " letras \n\nNORMAS: \n-No repitas caracteres\n-Escribe solo 1 caracter y SIEMPRE en minuscula \nLA PALABRA ES - " + minuscula.toUpperCase() + " - ")
+        
+                for (i = 0; i < palabra.length;i++){
+                    if(intoducido === minuscula.charAt(i)){
+                        acierto+=1;
+                        
+                    }else{
+    
+                    }
+                }
+    
+            }
+
+        }
+
+        juegoDelAhorcado(palabra);
+
+    </script>
+    
+
+
+
+
+</body>
+</html>
